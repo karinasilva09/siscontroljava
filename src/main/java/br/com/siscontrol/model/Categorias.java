@@ -8,10 +8,6 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
-
 @Entity
 public class Categorias {
 	
@@ -25,6 +21,9 @@ public class Categorias {
 	
 	@Column(name="id_categoria_pai")
 	private Long idCategoriaPai;
+	
+	@Column(name="nome_categoria_pai")
+	private String nomeCategoriaPai;
 	
 	@Column(name="dt_criacao")
 	private Date dataCriacao;
@@ -54,6 +53,14 @@ public class Categorias {
 
 	public void setIdCategoriaPai(Long idCategoriaPai) {
 		this.idCategoriaPai = idCategoriaPai;
+	}
+	
+	public String getNomeCategoriaPai() {
+		return nomeCategoriaPai;
+	}
+
+	public void setNomeCategoriaPai(String nomeCategoriaPai) {
+		this.nomeCategoriaPai = nomeCategoriaPai;
 	}
 
 	public Date getDataCriacao() {
